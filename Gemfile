@@ -40,6 +40,16 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+# easy-to-use wrapper for Net::HTTP
+gem "open-uri"
+#JSON implementation for Ruby
+gem "json"
+#Debugging gem
+gem "pry"
+#For Json format
+gem 'active_model_serializers'
+#For pagination
+gem 'will_paginate', '~> 3.3'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
