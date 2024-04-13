@@ -7,10 +7,15 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      resources :earthquakes, only: [:index]
+      resources :features, only: [:index]
     end
   end
-  
-  # Defines the root path route ("/")
-  # root "posts#index"
+
+  namespace :api do
+    namespace :v1 do
+      resources :features do
+        resources :comments, only: [:create]
+      end
+    end
+  end
 end

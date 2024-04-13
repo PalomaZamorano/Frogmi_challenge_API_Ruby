@@ -1,4 +1,4 @@
-class EarthquakeSerializer < ActiveModel::Serializer
+class FeatureSerializer < ActiveModel::Serializer
     attributes :external_id, :magnitude, :place, :time, :tsunami, :mag_type, :title, :coordinates, :links, :pagination
   
     def type

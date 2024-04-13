@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_12_143156) do
     t.index ["feature_id"], name: "index_comments_on_feature_id"
   end
 
-  create_table "earthquakes", force: :cascade do |t|
+  create_table "features", force: :cascade do |t|
     t.string "external_id"
     t.decimal "magnitude"
     t.string "place", null: false

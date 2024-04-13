@@ -1,5 +1,5 @@
 # app/models/earthquake.rb
-class Earthquake < ActiveRecord::Base
+class Feature < ActiveRecord::Base
     has_many :comments
   
     validates :magnitude, numericality: { greater_than_or_equal_to: -1.0, less_than_or_equal_to: 10.0 }

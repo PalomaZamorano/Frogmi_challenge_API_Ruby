@@ -1,7 +1,7 @@
 namespace :task do
   desc 'Get earthquake data'
 
-  task get_earthquake_data_task: :environment do
+  task get_features_data_task: :environment do
     require 'open-uri'
     require 'json'
     
@@ -24,10 +24,10 @@ namespace :task do
       next if latitude < -90.0 || latitude > 90.0
       next if longitude < -180.0 || longitude > 180.0
       
-      earthquake = Earthquake.find_by(external_id: id)
+      feature = Feature.find_by(external_id: id)
 
-      if !earthquake
-        Earthquake.create(
+      if !feature
+        Feature.create(
           external_id: id,
           magnitude: mag,
           place: place,
