@@ -13,6 +13,13 @@ module Api
                     render json: @comment.errors, status: :unprocessable_entity
                 end
             end
+
+            def show
+                feature = Feature.find(params[:feature_id])
+                comments = feature.comments # Suponiendo que los comentarios están asociados a las características
+        
+                render json: comments
+            end
             
             private
             

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :features do
-        resources :comments, only: [:create]
+        resource :comments, only: [:create, :show]
       end
     end
   end
